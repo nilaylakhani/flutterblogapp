@@ -1,4 +1,5 @@
 import 'package:blogappdemo/services/remoteServices.dart';
+import 'package:blogappdemo/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
@@ -17,8 +18,16 @@ class LogInScreenController {
   buildTextField(
       String label, TextEditingController textController, bool isObscureText) {
     return TextField(
+      cursorColor: kDarkColor,
+      style: TextStyle(color: kPrimaryTextColor),
       decoration: InputDecoration(
-        border: OutlineInputBorder(),
+        enabledBorder:
+            OutlineInputBorder(borderSide: new BorderSide(color: kDarkColor)),
+        focusedBorder:
+            OutlineInputBorder(borderSide: new BorderSide(color: kDarkColor)),
+        focusColor: kDarkColor,
+        hoverColor: kDarkColor,
+        labelStyle: TextStyle(color: kDarkColor),
         labelText: label,
       ),
       keyboardType:
